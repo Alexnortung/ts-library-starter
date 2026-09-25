@@ -24,7 +24,14 @@ jobs:
           node-version-file: package.json
           cache: pnpm
 
-      - run: pnpm install --frozen-lockfile
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
 
-      - run: pnpm run format
-      - run: pnpm exec biome check
+      - name: Lint / Check
+        run: pnpm exec biome check
+
+      - name: Test
+        run: pnpm run test
+
+      - name: Check build
+        run: pnpm run build

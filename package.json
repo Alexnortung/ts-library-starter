@@ -2,28 +2,48 @@
 	"name": "ts-library-starter",
 	"version": "0.0.0",
 	"description": "",
-	"main": "index.js",
+	"keywords": [],
+	"license": "MIT",
+	"author": "Alexander Nortung",
+	"sideEffects": false,
+	"type": "module",
+	"exports": {
+		".": {
+			"types": "./dist/index.d.ts",
+			"import": "./dist/index.js",
+			"require": "./dist/index.cjs"
+		}
+	},
+	"main": "./dist/index.cjs",
+	"module": "./dist/index.js",
+	"types": "./dist/index.d.ts",
+	"files": [
+		"dist"
+	],
 	"scripts": {
-		"prepublishOnly": "pnpm run build",
-		"build": "tsup",
+		"build": "tsup && tsc --emitDeclarationOnly",
 		"format": "biome format --fix",
 		"lint": "biome check --fix",
-		"test": "echo \"Error: no test specified\" && exit 1"
+		"prepare": "lefthook install",
+		"prepublishOnly": "pnpm run build",
+		"test": "vitest run",
+		"typecheck": "tsc --noEmit"
 	},
-	"keywords": [],
-	"author": "Alexander Nortung",
-	"license": "ISC",
+	"dependencies": {
+		"lint-staged": "^17.5.1"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "2.5.14",
+		"lefthook": "^2.1.14",
+		"tsup": "^8.5.1",
+		"typescript": "^7.0.2",
+		"vitest": "^5.0.1"
+	},
 	"devEngines": {
 		"packageManager": {
 			"name": "pnpm",
 			"version": "^11.6.0",
 			"onFail": "download"
 		}
-	},
-	"type": "module",
-	"devDependencies": {
-		"@biomejs/biome": "2.5.14",
-		"tsup": "^8.5.1",
-		"typescript": "^7.0.2"
 	}
 }

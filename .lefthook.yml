@@ -1,0 +1,6 @@
+pre-commit:
+  fail_on_changes: always
+
+  commands:
+    lint-staged:
+      run: pnpm lint-staged --fail-on-changes --hide-all
