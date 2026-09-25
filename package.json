@@ -1,0 +1,29 @@
+{
+	"name": "ts-library-starter",
+	"version": "0.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"prepublishOnly": "pnpm run build",
+		"build": "tsup",
+		"format": "biome format --fix",
+		"lint": "biome check --fix",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"keywords": [],
+	"author": "Alexander Nortung",
+	"license": "ISC",
+	"devEngines": {
+		"packageManager": {
+			"name": "pnpm",
+			"version": "^11.6.0",
+			"onFail": "download"
+		}
+	},
+	"type": "module",
+	"devDependencies": {
+		"@biomejs/biome": "2.5.14",
+		"tsup": "^8.5.1",
+		"typescript": "^7.0.2"
+	}
+}
