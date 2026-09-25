@@ -3,6 +3,13 @@
 	"version": "0.0.0",
 	"description": "",
 	"keywords": [],
+	"bugs": {
+		"url": "https://github.com/Alexnortung/ts-library-starter/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Alexnortung/ts-library-starter.git"
+	},
 	"license": "MIT",
 	"author": "Alexander Nortung",
 	"sideEffects": false,
