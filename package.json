@@ -33,7 +33,7 @@
 		"dist"
 	],
 	"scripts": {
-		"build": "tsup && tsc --emitDeclarationOnly && cp dist/index.d.ts dist/index.d.cts",
+		"build": "tsup && tsc --project tsconfig.build.json --emitDeclarationOnly && cp dist/index.d.ts dist/index.d.cts",
 		"format": "biome format --fix",
 		"lint": "biome check --fix",
 		"lint:package": "publint",
