@@ -33,8 +33,17 @@ jobs:
       - name: Check types
         run: pnpm run typecheck
 
-      - name: Test
-        run: pnpm run test
+      - name: Test with coverage
+        id: coverage
+        run: pnpm run test:coverage
+
+      - name: Upload coverage reports
+        if: ${{ !cancelled() && (steps.coverage.outcome == 'success' || steps.coverage.outcome == 'failure') }}
+        uses: actions/upload-artifact@v7
+        with:
+          name: coverage
+          path: coverage/
+          if-no-files-found: error
 
       - name: Check build
         run: pnpm run build

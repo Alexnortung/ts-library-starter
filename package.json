@@ -3,6 +3,7 @@
 	"version": "0.0.0",
 	"description": "",
 	"keywords": [],
+	"homepage": "https://alexnortung.github.io/ts-library-starter/",
 	"bugs": {
 		"url": "https://github.com/Alexnortung/ts-library-starter/issues"
 	},
@@ -42,11 +43,13 @@
 		"prepare": "lefthook install",
 		"prepublishOnly": "pnpm run build",
 		"test": "vitest run",
+		"test:coverage": "vitest run --coverage",
 		"typecheck": "tsc --noEmit"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "2.5.14",
 		"@types/node": "^26.6.3",
+		"@vitest/coverage-v8": "^5.0.2",
 		"deno": "2.9.6",
 		"knip": "^6.38.0",
 		"lefthook": "^2.1.14",
@@ -56,7 +59,7 @@
 		"publint": "^0.3.24",
 		"tsup": "^8.5.1",
 		"typescript": "^7.0.2",
-		"vitest": "^5.0.1"
+		"vitest": "^5.0.2"
 	},
 	"devEngines": {
 		"packageManager": {
