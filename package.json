@@ -34,7 +34,7 @@
 	],
 	"scripts": {
 		"build": "tsup && tsc --project tsconfig.build.json --emitDeclarationOnly && cp dist/index.d.ts dist/index.d.cts",
-		"format": "biome format --fix",
+		"format": "biome format --fix && prettier --write \"**/*.{yml,yaml}\"",
 		"knip": "knip",
 		"lint": "biome check --fix",
 		"lint:package": "publint",
@@ -49,6 +49,8 @@
 		"knip": "^6.38.0",
 		"lefthook": "^2.1.14",
 		"lint-staged": "^17.5.1",
+		"pkg-pr-new": "^0.0.88",
+		"prettier": "^3.9.9",
 		"publint": "^0.3.24",
 		"tsup": "^8.5.1",
 		"typescript": "^7.0.2",
