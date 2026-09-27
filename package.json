@@ -42,12 +42,10 @@
 		"test": "vitest run",
 		"typecheck": "tsc --noEmit"
 	},
-	"dependencies": {
-		"lint-staged": "^17.5.1"
-	},
 	"devDependencies": {
 		"@biomejs/biome": "2.5.14",
 		"lefthook": "^2.1.14",
+		"lint-staged": "^17.5.1",
 		"publint": "^0.3.24",
 		"tsup": "^8.5.1",
 		"typescript": "^7.0.2",
