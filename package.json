@@ -35,6 +35,7 @@
 	"scripts": {
 		"build": "tsup && tsc --project tsconfig.build.json --emitDeclarationOnly && cp dist/index.d.ts dist/index.d.cts",
 		"format": "biome format --fix",
+		"knip": "knip",
 		"lint": "biome check --fix",
 		"lint:package": "publint",
 		"prepare": "lefthook install",
@@ -44,6 +45,8 @@
 	},
 	"devDependencies": {
 		"@biomejs/biome": "2.5.14",
+		"@types/node": "^26.6.3",
+		"knip": "^6.38.0",
 		"lefthook": "^2.1.14",
 		"lint-staged": "^17.5.1",
 		"publint": "^0.3.24",

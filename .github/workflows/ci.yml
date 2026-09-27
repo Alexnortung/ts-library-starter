@@ -42,3 +42,6 @@ jobs:
       # Check that the build output still seems correct and ready for publishing
       - name: Publint
         run: pnpm run lint:package
+
+      - name: Check unused files, dependencies, etc.
+        run: pnpm run knip
