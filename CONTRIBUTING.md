@@ -16,6 +16,10 @@ Do not act like a [meat proxy](https://meatproxy.me/), you may ask AI if you are
 
 PRs that we consider fully vibe-coded may be closed without further explanation.
 
+## Commit messages
+
+Use [Conventional Commits](https://www.conventionalcommits.org/) for commit messages.
+
 ## Coding standards
 
 This repository follows multiple standards and best practices.

@@ -67,5 +67,8 @@
 			"version": "^11.6.0",
 			"onFail": "download"
 		}
+	},
+	"publishConfig": {
+		"access": "public"
 	}
 }
