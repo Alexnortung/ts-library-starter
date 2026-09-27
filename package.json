@@ -34,6 +34,7 @@
 	],
 	"scripts": {
 		"build": "tsup && tsc --project tsconfig.build.json --emitDeclarationOnly && cp dist/index.d.ts dist/index.d.cts",
+		"docs:build": "deno doc --html --name=ts-library-starter --output=docs-dist src/index.ts",
 		"format": "biome format --fix && prettier --write \"**/*.{yml,yaml}\"",
 		"knip": "knip",
 		"lint": "biome check --fix",
@@ -46,6 +47,7 @@
 	"devDependencies": {
 		"@biomejs/biome": "2.5.14",
 		"@types/node": "^26.6.3",
+		"deno": "2.9.6",
 		"knip": "^6.38.0",
 		"lefthook": "^2.1.14",
 		"lint-staged": "^17.5.1",

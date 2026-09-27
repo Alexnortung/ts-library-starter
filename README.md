@@ -20,6 +20,7 @@ It contains a lot of tools that you often need or is best practice in the develo
 - formatting and linting: with [biome](https://biomejs.dev/).
 - [publint](https://publint.dev/): ensures package builds are correctly configured.
 - [Knip](https://knip.dev/): Helps you remove old files and dependencies, which is often the result of incomplete refactors.
+- API documentation: generated with [Deno doc](https://docs.deno.com/runtime/reference/cli/doc/) and published to [GitHub Pages](https://alexnortung.github.io/ts-library-starter/).
 - CI: GitHub action workflows that checks that files have been formatted and linted, etc.
 
 ## How to use this template
