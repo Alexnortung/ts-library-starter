@@ -16,9 +16,14 @@
 	"type": "module",
 	"exports": {
 		".": {
-			"types": "./dist/index.d.ts",
-			"import": "./dist/index.js",
-			"require": "./dist/index.cjs"
+			"import": {
+				"types": "./dist/index.d.ts",
+				"default": "./dist/index.js"
+			},
+			"require": {
+				"types": "./dist/index.d.cts",
+				"default": "./dist/index.cjs"
+			}
 		}
 	},
 	"main": "./dist/index.cjs",
@@ -28,9 +33,10 @@
 		"dist"
 	],
 	"scripts": {
-		"build": "tsup && tsc --emitDeclarationOnly",
+		"build": "tsup && tsc --emitDeclarationOnly && cp dist/index.d.ts dist/index.d.cts",
 		"format": "biome format --fix",
 		"lint": "biome check --fix",
+		"lint:package": "publint",
 		"prepare": "lefthook install",
 		"prepublishOnly": "pnpm run build",
 		"test": "vitest run",
@@ -42,6 +48,7 @@
 	"devDependencies": {
 		"@biomejs/biome": "2.5.14",
 		"lefthook": "^2.1.14",
+		"publint": "^0.3.24",
 		"tsup": "^8.5.1",
 		"typescript": "^7.0.2",
 		"vitest": "^5.0.1"

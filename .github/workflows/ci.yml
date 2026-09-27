@@ -35,3 +35,7 @@ jobs:
 
       - name: Check build
         run: pnpm run build
+
+      # Check that the build output still seems correct and ready for publishing
+      - name: Publint
+        run: pnpm run lint:package
