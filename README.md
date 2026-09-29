@@ -15,7 +15,7 @@ It contains a lot of tools that you often need or is best practice in the develo
 
 **Tools**
 
-- Bundling: With [tsup](https://tsup.egoist.dev/) as it needs very little configuration and can build both esm and cjs.
+- Bundling: With [tsdown](https://tsdown.dev/) as it needs very little configuration, can build both esm and cjs, and generates declaration files with tsgo.
 - [.editorconfig](./.editorconfig): Developers often use different editors and this file makes it much easier to work together.
 - formatting and linting: with [biome](https://biomejs.dev/).
 - [publint](https://publint.dev/): ensures package builds are correctly configured.
