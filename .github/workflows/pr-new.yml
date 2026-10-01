@@ -30,4 +30,4 @@ jobs:
         run: pnpm run build
 
       - name: Publish package preview
-        run: pnpm exec pkg-pr-new publish --commentWithSha
+        run: pnpm exec pkg-pr-new publish --pnpm --commentWithSha
